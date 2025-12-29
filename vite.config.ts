@@ -6,7 +6,7 @@ const manifest = defineManifest({
   manifest_version: 3,
   name: "Tube Mania 2.0",
   version: "2.0.0",
-  description: "YouTube audio controller with pitch shift, EQ, and loop features",
+  description: "YouTube audio controller with pitch shift, EQ, loop, and piano features",
   permissions: ["tabs"],
   action: {
     default_popup: "index.html",

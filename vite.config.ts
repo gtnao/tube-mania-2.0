@@ -4,16 +4,24 @@ import { defineConfig } from "vite";
 
 const manifest = defineManifest({
   manifest_version: 3,
-  // TODO: please change this to your extension's Name
-  name: "Example Extension",
-  version: "1.0.0",
+  name: "Tube Mania 2.0",
+  version: "2.0.0",
+  description: "YouTube audio controller with pitch shift, EQ, and loop features",
   permissions: ["tabs"],
   action: {
     default_popup: "index.html",
+    default_icon: {
+      "16": "public/icons/icon-16.png",
+      "128": "public/icons/icon-128.png",
+    },
+  },
+  icons: {
+    "16": "public/icons/icon-16.png",
+    "128": "public/icons/icon-128.png",
   },
   content_scripts: [
     {
-      matches: ["https://*/*"],
+      matches: ["https://www.youtube.com/*"],
       js: ["src/content/main.ts"],
     },
   ],

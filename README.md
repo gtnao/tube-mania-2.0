@@ -1,10 +1,12 @@
 # Tube Mania 2.0
 
-YouTube audio controller Chrome extension with pitch shift, EQ, loop, and piano features.
+Video audio controller Chrome extension with pitch shift, EQ, loop, and piano features.
+
+Supported sites: YouTube, Instagram
 
 ## Features
 
-- **Playback Control**: Play/pause, seek, rewind (1s/5s/10s/30s)
+- **Playback Control**: Play/pause, seek, rewind (1s/5s/10s)
 - **Speed Control**: 0.25x - 5x with fine-grained control
 - **Pitch Shift**: ±12 semitones
 - **10-Band Equalizer**: -16dB to +16dB per band
@@ -20,6 +22,12 @@ YouTube audio controller Chrome extension with pitch shift, EQ, loop, and piano 
 - Web Audio API
 
 ## Development
+
+### Requirements
+
+- [pnpm](https://pnpm.io/installation)
+
+### Commands
 
 ```bash
 # Install dependencies
@@ -41,7 +49,7 @@ pnpm run build
 
 ## Usage
 
-1. Open a YouTube video page
+1. Open a video page on YouTube or Instagram
 2. Click the Tube Mania extension icon
 3. Use the controls to adjust playback
 

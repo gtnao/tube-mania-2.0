@@ -1,28 +1,23 @@
-# Chrome Extension Template
+# Tube Mania 2.0
 
-**⚠️ This template is intended for PRIVATE USE ONLY, not for publishing to Chrome Web Store.**
+YouTube audio controller Chrome extension with pitch shift, EQ, loop, and piano features.
 
 ## Features
 
-- 🚀 **Vite** - Fast build tool with [@crxjs/vite-plugin](https://crxjs.dev/) for Chrome extension development
-  - Lightning-fast HMR (Hot Module Replacement) for popup development
-  - Instant updates without losing application state
-  - Automatic manifest generation and optimization
-- ⚛️ **React** - Build interactive popup UI with modern React
-- 📘 **TypeScript** - Full type safety across popup and content scripts
-- 🎨 **[Mantine UI](https://ui.mantine.dev/)** - Pre-configured with Mantine (feel free to swap with your preferred UI library)
-- 🔒 **Type-safe messaging** - Communication between popup and content scripts with type safety (see `src/shared/messaging.ts`)
+- **Playback Control**: Play/pause, seek, rewind (1s/5s/10s/30s)
+- **Speed Control**: 0.25x - 5x with fine-grained control
+- **Pitch Shift**: ±12 semitones
+- **10-Band Equalizer**: -16dB to +16dB per band
+- **Loop Playback**: Set start/end points while playing
+- **Piano**: 2-octave keyboard with adjustable octave (2-5) and volume
 
-## Example Extension
+## Tech Stack
 
-<img width="1613" height="293" alt="extension-example" src="https://github.com/user-attachments/assets/05d15af0-9b4a-47b4-a7de-d56df8d5a17d" />
-
-This template includes a simple example demonstrating communication between popup and content script (fetching body text length from the current page).
-
-## Prerequisites
-
-- Node.js
-- [pnpm](https://pnpm.io/installation)
+- TypeScript
+- React
+- Mantine UI
+- Vite + @crxjs/vite-plugin
+- Web Audio API
 
 ## Development
 
@@ -30,22 +25,30 @@ This template includes a simple example demonstrating communication between popu
 # Install dependencies
 pnpm install
 
-# Start development server
+# Development build with watch
 pnpm run dev
 
-# Build for production
+# Production build
 pnpm run build
 ```
 
-## Loading the Extension
+## Installation
 
-1. Open Chrome and navigate to `chrome://extensions/`
-2. Enable "Developer mode" (toggle in top right)
-3. Click "Load unpacked"
-4. Select the `dist` folder from this project
+1. Run `pnpm run build`
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable "Developer mode"
+4. Click "Load unpacked" and select the `dist` folder
 
-## Hot Reload
+## Usage
 
-- ✅ **Popup**: Changes are hot-reloaded automatically
-- ❌ **Content Scripts**: Requires manual extension reload in Chrome
-  - After modifying content scripts, reload the extension from `chrome://extensions/`
+1. Open a YouTube video page
+2. Click the Tube Mania extension icon
+3. Use the controls to adjust playback
+
+## License
+
+MIT (See [LICENSE](LICENSE))
+
+### Third-Party Licenses
+
+- **Jungle.js** (pitch shifter): MIT License - by Chris Wilson (https://github.com/cwilso/Audio-Input-Effects)

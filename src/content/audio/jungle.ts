@@ -1,6 +1,9 @@
 // Jungle - Pitch Shifter using Web Audio API
-// Based on Google's implementation (BSD license)
 // TypeScript port for Tube Mania 2.0
+//
+// Original implementation by Chris Wilson
+// https://github.com/cwilso/Audio-Input-Effects
+// Licensed under the MIT License
 
 const DELAY_TIME = 0.1;
 const FADE_TIME = 0.05;

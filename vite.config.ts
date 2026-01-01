@@ -5,9 +5,9 @@ import { defineConfig } from "vite";
 const manifest = defineManifest({
   manifest_version: 3,
   name: "Tube Mania 2.0",
-  version: "2.0.0",
-  description: "Video audio controller with pitch shift, EQ, loop, and piano features",
-  permissions: ["tabs"],
+  version: "2.0.1",
+  description:
+    "Video audio controller with pitch shift, EQ, loop, and piano features",
   action: {
     default_popup: "index.html",
     default_icon: {
